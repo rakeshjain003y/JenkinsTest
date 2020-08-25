@@ -4,7 +4,7 @@ var githubMiddleware = require('github-webhook-middleware')({
   secret: 'WEBHOOK'
 });
 
-const port = 3007
+var port = 3007
  
 app.post('/hooks/github/', githubMiddleware, function(req, res) {
   // Only respond to github push events
