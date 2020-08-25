@@ -18,6 +18,7 @@ app.post('/hooks/github/', githubMiddleware, function(req, res) {
 });
 
 app.listen(port, () => {
+   console.log("Testing")
   console.log("Example app listening at http://localhost:${port}")
 })
  
