@@ -9,7 +9,7 @@ var port = 3007
 app.post('/hooks/github/', githubMiddleware, function(req, res) {
   // Only respond to github push events
   if (req.headers['x-github-event'] != 'push') return res.status(200).end();
- 
+  console.log(req.body) 
   var payload = req.body
     , repo    = payload.repository.full_name
     , branch  = payload.ref.split('/').pop();
